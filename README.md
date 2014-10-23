@@ -1,4 +1,4 @@
-User Administration: Aplication de windows para Administrar usuario
+User Administration: Aplicación de windows para Administrar usuarios
 ==================
 
 Administrador de usuarios

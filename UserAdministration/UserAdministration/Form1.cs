@@ -21,5 +21,12 @@ namespace UserAdministration
         {
              
         }
+
+        private void FormUsers_Load(object sender, EventArgs e)
+        {
+            Manager myManager = new Manager();
+
+            myManager.DisplayUserList(dgvUserList);
+        }
     }
 }

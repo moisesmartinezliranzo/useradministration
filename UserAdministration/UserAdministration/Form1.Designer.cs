@@ -62,6 +62,7 @@
             this.MinimizeBox = false;
             this.Name = "FormUsers";
             this.Text = "Administración de usuarios";
+            this.Load += new System.EventHandler(this.FormUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
             this.ResumeLayout(false);
 

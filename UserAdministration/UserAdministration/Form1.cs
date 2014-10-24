@@ -16,5 +16,10 @@ namespace UserAdministration
         {
             InitializeComponent();
         }
+
+        private void btnNewUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

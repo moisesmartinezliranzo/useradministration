@@ -19,7 +19,7 @@ namespace UserAdministration
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-
+             
         }
     }
 }

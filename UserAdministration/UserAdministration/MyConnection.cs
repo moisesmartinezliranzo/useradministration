@@ -23,8 +23,8 @@ namespace UserAdministration
             }
             catch(Exception ex)
             {
+                MessageBox.Show(ex.ToString(), "Exception");
                 return null;
-                MessageBox.Show(ex.ToString(), "Exception");                
             }
             
         }

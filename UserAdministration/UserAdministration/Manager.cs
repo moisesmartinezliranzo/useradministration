@@ -27,6 +27,6 @@ namespace UserAdministration
                 myCommand.Connection.Close();
             }
             grid.DataSource = myDataTable;
-        }
+        }       
     }
 }

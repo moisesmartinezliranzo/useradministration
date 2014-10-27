@@ -15,6 +15,8 @@ namespace UserAdministration
         SqlCommand myCommand;
         SqlDataAdapter mySqlAdapter;
         
+
+        /*Muestra los registros de la tabla en un gridview*/
         public void DisplayUserList(DataGridView grid)
         {
             myDataTable = new DataTable();
@@ -26,7 +28,24 @@ namespace UserAdministration
             {
                 myCommand.Connection.Close();
             }
+            
+            for (int i = 0; i < myDataTable.Rows.Count; i++ )
+            {
+                myDataTable.Rows[i]["Nombre"] = UpperFirstLetter(myDataTable.Rows[i]["Nombre"].ToString());
+                myDataTable.Rows[i]["Apellido"] = UpperFirstLetter(myDataTable.Rows[i]["Apellido"].ToString());
+            }
+
             grid.DataSource = myDataTable;
+        }
+
+        /*Convierte la primera letra de un string en mayuscula*/
+        private string UpperFirstLetter(string firtLetterUpper)
+        {
+            if (string.IsNullOrEmpty(firtLetterUpper))
+            {
+                return string.Empty;
+            }
+            return char.ToUpper(firtLetterUpper[0]) + firtLetterUpper.Substring(1);
         }
     }
 }

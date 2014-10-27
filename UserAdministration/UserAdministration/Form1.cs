@@ -27,6 +27,8 @@ namespace UserAdministration
             Manager myManager = new Manager();
 
             myManager.DisplayUserList(dgvUserList);
+
+            dgvUserList.Columns[0].Visible = false;          
         }
     }
 }

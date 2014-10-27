@@ -25,8 +25,7 @@ namespace UserAdministration
             {
                 MessageBox.Show(ex.ToString(), "Exception");
                 return null;
-            }
-            
+            }            
         }
     }
 }

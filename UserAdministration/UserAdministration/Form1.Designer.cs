@@ -45,21 +45,26 @@
             // 
             // dgvUserList
             // 
+            this.dgvUserList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUserList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUserList.Location = new System.Drawing.Point(13, 42);
             this.dgvUserList.Name = "dgvUserList";
-            this.dgvUserList.Size = new System.Drawing.Size(240, 150);
+            this.dgvUserList.Size = new System.Drawing.Size(609, 150);
             this.dgvUserList.TabIndex = 1;
             // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(634, 345);
             this.Controls.Add(this.dgvUserList);
             this.Controls.Add(this.btnNewUser);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(650, 383);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(650, 383);
             this.Name = "FormUsers";
             this.Text = "Administración de usuarios";
             this.Load += new System.EventHandler(this.FormUsers_Load);

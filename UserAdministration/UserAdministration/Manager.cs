@@ -31,6 +31,7 @@ namespace UserAdministration
             
             for (int i = 0; i < myDataTable.Rows.Count; i++ )
             {
+
                 myDataTable.Rows[i]["Nombre"] = UpperFirstLetter(myDataTable.Rows[i]["Nombre"].ToString());
                 myDataTable.Rows[i]["Apellido"] = UpperFirstLetter(myDataTable.Rows[i]["Apellido"].ToString());
             }

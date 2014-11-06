@@ -50,8 +50,10 @@
             this.dgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUserList.Location = new System.Drawing.Point(13, 42);
             this.dgvUserList.Name = "dgvUserList";
-            this.dgvUserList.Size = new System.Drawing.Size(609, 150);
+            this.dgvUserList.ReadOnly = true;
+            this.dgvUserList.Size = new System.Drawing.Size(609, 291);
             this.dgvUserList.TabIndex = 1;
+            this.dgvUserList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserList_CellContentDoubleClick);
             // 
             // FormUsers
             // 
@@ -66,6 +68,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(650, 383);
             this.Name = "FormUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración de usuarios";
             this.Load += new System.EventHandler(this.FormUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();

@@ -19,17 +19,32 @@ namespace UserAdministration
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-            FormNewUser FNewUser = new FormNewUser();
-            FNewUser.ShowDialog();
+            FormNewUser FNewUser = new FormNewUser();          
+
+            DialogResult result = FNewUser.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                ShowData();
+            }
         }
 
         private void FormUsers_Load(object sender, EventArgs e)
         {
-            Manager myManager = new Manager();
-
-            myManager.DisplayUserList(dgvUserList);
-
-            dgvUserList.Columns[0].Visible = false;          
+            ShowData();
         }
+
+        public void ShowData()
+        {
+            Manager myManager = new Manager();
+            myManager.DisplayUserList(dgvUserList);
+            dgvUserList.Columns[0].Visible = false; 
+        }
+
+        private void dgvUserList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var userId =  dgvUserList.Rows[e.RowIndex].Cells[0].Value;          
+            Manager myManager = new Manager();
+            myManager.SelectUserById((int)userId);                     
+        }        
     }
 }

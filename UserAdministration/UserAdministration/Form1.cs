@@ -19,7 +19,8 @@ namespace UserAdministration
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-             
+            FormNewUser FNewUser = new FormNewUser();
+            FNewUser.ShowDialog();
         }
 
         private void FormUsers_Load(object sender, EventArgs e)

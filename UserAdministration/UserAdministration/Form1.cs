@@ -39,12 +39,24 @@ namespace UserAdministration
             myManager.DisplayUserList(dgvUserList);
             dgvUserList.Columns[0].Visible = false; 
         }
-
-        private void dgvUserList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void dgvUserList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var userId =  dgvUserList.Rows[e.RowIndex].Cells[0].Value;          
-            Manager myManager = new Manager();
-            myManager.SelectUserById((int)userId);                     
-        }        
+            try
+            {
+                var userId = dgvUserList.Rows[e.RowIndex].Cells[0].Value;
+                Manager myManager = new Manager((int)userId);
+
+                if (myManager.SelectUserById((int)userId) == DialogResult.OK)
+                {
+                    ShowData();
+                }
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("No existen usuarios en los registros", "No existen usuarios",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                MessageBox.Show(ex.ToString());
+            }
+        }               
     }
 }

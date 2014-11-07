@@ -8,6 +8,7 @@ namespace UserAdministration
 {
     public  class UserClass
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Addr { get; set; }
@@ -15,7 +16,7 @@ namespace UserAdministration
         public string Phone { get; set; }
         public string Gender { get; set; }
 
-        public UserClass(string name, string lastName,string addr,string email,string phone,string gender)
+        public UserClass(string name, string lastName,string addr,string email,string phone,string gender,int id)
         {
             this.Name = name;
             this.LastName = lastName;
@@ -23,6 +24,7 @@ namespace UserAdministration
             this.Email = email;
             this.Phone = phone;
             this.Gender = gender;
+            this.Id = id;
         }
     }
 }

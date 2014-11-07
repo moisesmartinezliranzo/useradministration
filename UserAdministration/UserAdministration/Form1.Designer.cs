@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsers));
             this.btnNewUser = new System.Windows.Forms.Button();
             this.dgvUserList = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
@@ -35,9 +36,10 @@
             // 
             // btnNewUser
             // 
-            this.btnNewUser.Location = new System.Drawing.Point(12, 12);
+            this.btnNewUser.Location = new System.Drawing.Point(16, 15);
+            this.btnNewUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNewUser.Name = "btnNewUser";
-            this.btnNewUser.Size = new System.Drawing.Size(118, 23);
+            this.btnNewUser.Size = new System.Drawing.Size(157, 28);
             this.btnNewUser.TabIndex = 0;
             this.btnNewUser.Text = "Nuevo Usuario";
             this.btnNewUser.UseVisualStyleBackColor = true;
@@ -48,25 +50,27 @@
             this.dgvUserList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUserList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserList.Location = new System.Drawing.Point(13, 42);
+            this.dgvUserList.Location = new System.Drawing.Point(16, 51);
+            this.dgvUserList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUserList.Name = "dgvUserList";
             this.dgvUserList.ReadOnly = true;
-            this.dgvUserList.Size = new System.Drawing.Size(609, 291);
+            this.dgvUserList.Size = new System.Drawing.Size(755, 498);
             this.dgvUserList.TabIndex = 1;
-            this.dgvUserList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserList_CellContentDoubleClick);
+            this.dgvUserList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserList_CellDoubleClick);
             // 
             // FormUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(634, 345);
+            this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.dgvUserList);
             this.Controls.Add(this.btnNewUser);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(650, 383);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(650, 383);
+            this.MaximumSize = new System.Drawing.Size(800, 600);
             this.Name = "FormUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración de usuarios";

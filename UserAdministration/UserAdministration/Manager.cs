@@ -15,6 +15,16 @@ namespace UserAdministration
         SqlCommand myCommand;
         SqlDataAdapter mySqlAdapter;
         SqlDataReader myDataReader = null;
+        private int userId;
+
+        public Manager()
+        { 
+        }
+
+        public Manager(int id)
+        {
+            this.userId = id;
+        }
         
         /*Muestra los registros de la tabla en un gridview*/
         public void DisplayUserList(DataGridView grid)
@@ -59,7 +69,7 @@ namespace UserAdministration
                     myCommand.Connection.Close();
                 }
 
-                MessageBox.Show("El Usuario: " + name +" "+ last_name + " ha sido creado satisfactoriamente");
+                MessageBox.Show("El Usuario: " + UpperFirstLetter(name) + " " + UpperFirstLetter(last_name) + " ha sido creado satisfactoriamente", "Nuevo usuario creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -68,7 +78,7 @@ namespace UserAdministration
         }
 
         /*Seleccionar usuario por id*/
-        public void SelectUserById(int id)
+        public DialogResult SelectUserById(int id)
         {
             string name=null,  last_name =null,   addr = null,  email = null,  phone = null,  gender=null;
             try
@@ -81,29 +91,77 @@ namespace UserAdministration
 
                 while (myDataReader.Read())
                 {
-                    name = myDataReader["Nombre"].ToString();
-                    last_name = myDataReader["Apellido"].ToString();
+                    name = UpperFirstLetter(myDataReader["Nombre"].ToString());
+                    last_name = UpperFirstLetter(myDataReader["Apellido"].ToString());
                     addr = myDataReader["Dirección"].ToString();
                     email = myDataReader["Email"].ToString();
                     phone = myDataReader["Teléfono"].ToString();
-                    gender = myDataReader["Género"].ToString();
+                    gender = myDataReader["Género"].ToString();                  
                 }
 
-                UserClass user = new UserClass(name,last_name,addr,email,phone,gender);
+                UserClass user = new UserClass(name,last_name,addr,email,phone,gender,id);
                 FormEditOrDeleteUser myFormEditOrDeleteUser = new FormEditOrDeleteUser(user);
-                myFormEditOrDeleteUser.ShowDialog();
 
+               DialogResult result = myFormEditOrDeleteUser.ShowDialog();
+               return result;
             }
             catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return DialogResult.Cancel;
+            }
+        }
+
+        /*Actualizar informacion de usuario*/
+        public void UpdateUser(string name, string last_name,string addr,string email,string phone,string gender,int id)
+        {
+            try
+            {
+                myCommand = new SqlCommand("SP_UpdateUser", MyConnection.GetConnection());
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.Parameters.Add("@name",SqlDbType.VarChar).Value = name;
+                myCommand.Parameters.Add("@last_name",SqlDbType.VarChar).Value = last_name;
+                myCommand.Parameters.Add("@addr",SqlDbType.VarChar).Value = addr;
+                myCommand.Parameters.Add("@email",SqlDbType.VarChar).Value = email;
+                myCommand.Parameters.Add("@phone", SqlDbType.VarChar).Value = phone;
+                myCommand.Parameters.Add("@gender",SqlDbType.VarChar).Value = gender;
+                myCommand.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                myCommand.ExecuteNonQuery(); 
+           
+                if(myCommand.Connection.State == ConnectionState.Open)
+                {
+                    myCommand.Connection.Close();
+                }
+
+                MessageBox.Show("La información del usuario ha sido actualizado satisfactoriamente","Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
 
-        /*Actualizar informacion de usuario*/
-        public void UpdateUser()
+        /*Eliminar usuario*/
+        public void DeleteUser(int id)
         {
- 
+            try
+            {
+                myCommand = new SqlCommand("SP_DeleteUser", MyConnection.GetConnection());
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.Parameters.Add("@id",SqlDbType.Int).Value = id;
+
+                myCommand.ExecuteNonQuery();
+
+                if(myCommand.Connection.State == ConnectionState.Open)
+                {
+                    myCommand.Connection.Close();
+                }
+                MessageBox.Show("El usuario ha sido eliminado satisfactoriamente","Eliminado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         /*Convierte la primera letra de un string en mayuscula*/

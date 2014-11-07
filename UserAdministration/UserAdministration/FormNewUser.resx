@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///8B////Af///wH///8BA3azFwN2szUFeLRJBHezRwR1tB3///8BMnTc1zN739cwbtqH////Af//
+        /wH///8B////Af///wH///8BAnWyOwyAubEhmcfZMqzS6S6nz+URhry5FnLDhTWQ6P06rPT9MnXdn///
+        /wH///8B////Af///wH///8BCX63ayafy+lf3vD9b/D7/XDt+/1s6fr/XNbv/TKU1f01mOv/Obr6/TJ5
+        3qH///8B////Af///wH///8BAnWyNSKayOdg3/H9cer5/23F7P9boeP/Rpjl/0ad5v88i+H/N5vt/zu7
+        +v8ye97dMnTcoTFz3KEwbtmJAnSxDQl+t6FZ2Oz9cvP9/3Hh9/9qpOH/VJDe/0OZ6f9gw/n/b8f5/3rQ
+        +/981f3/dMn5/2jF+f1QsfP9Nnzf1wJ1sjMglsbbbu/6/XL0/f9z8v3/cez6/1i87v9LkuX/ZKzu/2at
+        7v94wvb/hdX7/2mv7/9mrO79WaDq/Tl43dcGbaddP53I9XjX7P935PT/dPH7/3Pz/P9p4Pj/XMXw/1zC
+        7/9Opuj/U6Hs/23H+f01c9vHMm7aYTBt2VswbNlNAkF2qR5RhPtEa5r/Y4ix/5+ruf+byM//c/P8/4fe
+        5/+qub//eanR/0qe6/9dwvn9NHTcn////wH///8B////AQAyZdERM2b9FjNm/w40Zv8zPWb/dmOB/3bQ
+        5/+S0Nn/xp2h/4ibwf87ieT/QZzr/TFw253///8B////Af///wEBMmXVHTJl/TAzZv8rM2b/HTNm/xM5
+        av9IdaL/eMjh/3ns9f9r2/T/UbLr/y+N1fkwbdk1////Af///wH///8BATJlvxszZv00NGb/NDRm/zM0
+        Zv8sNGb/ETdp/zRZi/9xsNH/d9zv/2zl9f0onsvt////Af///wH///8B////AQAyZZUVNGf7OTlq/zo6
+        av85Omv/OTpq/y44av8WOGr/Jk6A/1N7qP9locn9HoG22f///wH///8B////Af///wEAMmU7BjRm4TxF
+        c/1KSnb/S0t4/0tLeP9KS3j/SEp3/zBFcv8aPm7/CDlr+wI6bav///8B////Af///wH///8BADJlDQAy
+        ZZUiQXD9V16F/2ZmjP9nZ4z/ZmeM/2ZmjP9iZIr/QVJ9/QQ0Z+MAM2ZP////Af///wH///8B////Af//
+        /wH///8BATRmnxZAb+9NZIv9aXiZ/3B8nf9ndpf/OVeA+w06a+EAMWVdADJlCf///wH///8B////Af//
+        /wH///8B////AQAzZhMBM2ZnBjZoxw88bekSP2/xDjxs4wQ1Z6EAMmVJADFlB////wH///8B////Af//
+        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//w==
+</value>
+  </data>
 </root>

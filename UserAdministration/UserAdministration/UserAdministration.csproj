@@ -62,6 +62,12 @@
     <Compile Include="FormNewUser.Designer.cs">
       <DependentUpon>FormNewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FSendEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSendEmail.Designer.cs">
+      <DependentUpon>FSendEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="MyConnection.cs" />
     <Compile Include="Program.cs" />
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewUser.resx">
       <DependentUpon>FormNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSendEmail.resx">
+      <DependentUpon>FSendEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +107,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

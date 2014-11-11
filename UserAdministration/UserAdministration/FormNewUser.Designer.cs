@@ -46,19 +46,23 @@
             // 
             // btn_create_user
             // 
+            this.btn_create_user.Image = global::UserAdministration.Properties.Resources.check;
+            this.btn_create_user.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_create_user.Location = new System.Drawing.Point(97, 211);
-            this.btn_create_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_create_user.Margin = new System.Windows.Forms.Padding(4);
             this.btn_create_user.Name = "btn_create_user";
+            this.btn_create_user.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btn_create_user.Size = new System.Drawing.Size(133, 28);
             this.btn_create_user.TabIndex = 0;
             this.btn_create_user.Text = "Crear usuario";
+            this.btn_create_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_create_user.UseVisualStyleBackColor = true;
             this.btn_create_user.Click += new System.EventHandler(this.btn_create_user_Click);
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(97, 14);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(220, 22);
             this.txtName.TabIndex = 1;
@@ -66,7 +70,7 @@
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(97, 46);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(220, 22);
             this.txtLastName.TabIndex = 2;
@@ -74,7 +78,7 @@
             // txtAddr
             // 
             this.txtAddr.Location = new System.Drawing.Point(97, 79);
-            this.txtAddr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddr.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddr.Name = "txtAddr";
             this.txtAddr.Size = new System.Drawing.Size(324, 22);
             this.txtAddr.TabIndex = 3;
@@ -82,7 +86,7 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(97, 144);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(132, 22);
             this.txtPhone.TabIndex = 4;
@@ -94,7 +98,7 @@
             "Femenino",
             "Masculino"});
             this.cmbGender.Location = new System.Drawing.Point(97, 178);
-            this.cmbGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(132, 24);
             this.cmbGender.TabIndex = 5;
@@ -162,7 +166,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(97, 112);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(324, 22);
             this.txtEmail.TabIndex = 12;
@@ -187,7 +191,7 @@
             this.Controls.Add(this.btn_create_user);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(450, 287);
             this.MinimizeBox = false;

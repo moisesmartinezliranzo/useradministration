@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+using System.Net;
+using System.Net.Mail;
 
 namespace UserAdministration
 {
@@ -16,6 +19,9 @@ namespace UserAdministration
         SqlDataAdapter mySqlAdapter;
         SqlDataReader myDataReader = null;
         private int userId;
+
+        MailMessage myMailMessage;
+        SmtpClient mySmtpClient;
 
         public Manager()
         { 
@@ -172,6 +178,43 @@ namespace UserAdministration
                 return string.Empty;
             }
             return char.ToUpper(firtLetterUpper[0]) + firtLetterUpper.Substring(1);
+        }
+
+        /*Evalua si el email es valido*/
+        public bool IsValidEmail(string email)
+        {
+            Regex myRegularExpression = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+
+            if (myRegularExpression.IsMatch(email))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /*Enviar email*/
+
+        public void SendMailTo(string email)
+        {
+            mySmtpClient = new SmtpClient("smtp.gmail.com");
+
+            myMailMessage = new MailMessage();
+
+            myMailMessage.From = new MailAddress("moisesmmltest@gmail.com","Moises");
+            myMailMessage.To.Add("moisesmartinezliranzo@gmail.com");
+            myMailMessage.Subject = "SU";
+            myMailMessage.Body = "B";
+            myMailMessage.IsBodyHtml = true;
+
+            mySmtpClient.Port = 587;
+            mySmtpClient.EnableSsl = true;
+            mySmtpClient.Credentials = new System.Net.NetworkCredential("moisesmmltest@gmail.com","pwdprueba");
+
+            mySmtpClient.Send(myMailMessage);
+
         }
     }
 }

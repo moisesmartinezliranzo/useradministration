@@ -20,15 +20,23 @@ namespace UserAdministration
         private void btn_create_user_Click(object sender, EventArgs e)
         {
             Manager myManager = new Manager();
-            try
+            if (myManager.IsValidEmail(txtEmail.Text) == true)
             {
-                myManager.CreateUser(txtName.Text, txtLastName.Text, txtAddr.Text, txtEmail.Text, txtPhone.Text, cmbGender.SelectedItem.ToString());
-                this.DialogResult = DialogResult.OK;
+                try
+                {
+                    myManager.CreateUser(txtName.Text, txtLastName.Text, txtAddr.Text, txtEmail.Text, txtPhone.Text, cmbGender.SelectedItem.ToString());
+                    this.DialogResult = DialogResult.OK;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Al parecer existen campos vacíos. \nPor favor, verifique la información", "Houston tenemos un problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch(Exception)
+            else
             {
-                MessageBox.Show("Al parecer existen campos vacíos. \nPor favor, verifique la información", "Houston tenemos un problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Correo electronico no valido","Correo no valido",MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+            
         }
     }
 }

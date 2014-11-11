@@ -12,21 +12,26 @@ namespace UserAdministration
 {
     public partial class FSendEmail : Form
     {
-
+        public string email;
         public FSendEmail()
         {
             InitializeComponent();
         }
+        public FSendEmail(String email)
+        {
+            InitializeComponent();
+            this.email = email;
+        }
 
         private void FSendEmail_Load(object sender, EventArgs e)
         {
-
+            txtFrom.Text = email;
         }
 
         private void btn_SendMail_Click(object sender, EventArgs e)
         {
             Manager myManager = new Manager();
-            myManager.SendMailTo("Hardcode");
+            myManager.SendMailTo(email);
         }
     }
 }

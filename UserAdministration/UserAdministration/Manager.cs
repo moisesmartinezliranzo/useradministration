@@ -197,16 +197,18 @@ namespace UserAdministration
 
         /*Enviar email*/
 
-        public void SendMailTo(string email)
+        public void SendMailTo(string email, string subject, string msg)
         {
+            string template = "<div style=\"background-color:#999; padding: 20px 0px; height:100%;\" > <div style=\"width:600px; margin:0 auto 0 auto; background-color:#fff;\"> <div style=\"padding:10px; font-size:16px;\"> {0} </div> </div> </div>";
+            template = string.Format(template,msg);
             mySmtpClient = new SmtpClient("smtp.gmail.com");
-
+            
             myMailMessage = new MailMessage();
 
             myMailMessage.From = new MailAddress("moisesmmltest@gmail.com","Moises");
-            myMailMessage.To.Add("moisesmartinezliranzo@gmail.com");
-            myMailMessage.Subject = "SU";
-            myMailMessage.Body = "B";
+            myMailMessage.To.Add(email);
+            myMailMessage.Subject = subject;
+            myMailMessage.Body = template;
             myMailMessage.IsBodyHtml = true;
 
             mySmtpClient.Port = 587;

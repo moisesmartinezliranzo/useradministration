@@ -25,13 +25,43 @@ namespace UserAdministration
 
         private void FSendEmail_Load(object sender, EventArgs e)
         {
-            txtFrom.Text = email;
+            txtTo.Text = email;
         }
 
         private void btn_SendMail_Click(object sender, EventArgs e)
         {
-            Manager myManager = new Manager();
-            myManager.SendMailTo(email);
+            if (string.IsNullOrEmpty(txtSubject.Text) || string.IsNullOrEmpty(rtxtMessage.Text))
+            {
+                MessageBox.Show("Al parecer existen campos vacíos. \nPor favor, verifique la información", "Información incoherente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Manager myManager = new Manager();
+                string body = rtxtMessage.Text.Replace("\n", "<br />");
+                this.timer1.Start();
+                this.Text = "Enviando mensaje...";
+                btn_SendMail.Size = new System.Drawing.Size(120, 28);
+                btn_SendMail.Text = "Enviando...";
+
+                btn_SendMail.Enabled = false;
+                this.timer1.Start();
+                
+                myManager.SendMailTo(email, txtSubject.Text, body);
+                                
+                btn_SendMail.Enabled = true;
+                btn_SendMail.Size = new System.Drawing.Size(98, 28);
+                btn_SendMail.Text = "Enviar";
+                
+
+                MessageBox.Show("Mensaje enviado.", "Enviando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+
+                
+            }
+            
         }
+
+             
+
     }
 }

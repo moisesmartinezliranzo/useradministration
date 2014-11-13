@@ -101,6 +101,16 @@ namespace UserAdministration.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mail_send {
+            get {
+                object obj = ResourceManager.GetObject("mail-send", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a workstation id=moisesdbx.mssql.somee.com;packet size=4096;user id=moisessomee_SQLLogin_1;pwd=gj7spe9ey9;data source=moisesdbx.mssql.somee.com;persist security info=False;initial catalog=moisesdbx.
         /// </summary>
         internal static string RConnectionString {
@@ -125,6 +135,16 @@ namespace UserAdministration.Properties {
         internal static System.Drawing.Bitmap user_add {
             get {
                 object obj = ResourceManager.GetObject("user_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_msg {
+            get {
+                object obj = ResourceManager.GetObject("user_msg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

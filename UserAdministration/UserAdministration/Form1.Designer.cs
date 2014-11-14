@@ -51,6 +51,8 @@
             // 
             // dgvUserList
             // 
+            this.dgvUserList.AllowUserToAddRows = false;
+            this.dgvUserList.AllowUserToDeleteRows = false;
             this.dgvUserList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUserList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

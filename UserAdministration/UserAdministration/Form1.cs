@@ -57,6 +57,34 @@ namespace UserAdministration
                 //MessageBox.Show("No existen usuarios en los registros", "No existen usuarios",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 MessageBox.Show(ex.ToString());
             }
-        }               
+        }
+
+        private void btnFindUser_Click(object sender, EventArgs e)
+        {
+            gbSearchUser.Text = "Buscando...";
+            gbSearchUser.Enabled = false;
+            btnFindUser.Text = "Buscando";
+            btnFindUser.Size = new System.Drawing.Size(110, 28);            
+           
+            ShowUserResult(txtUserParam.Text);
+
+            gbSearchUser.Enabled = true;
+            btnFindUser.Text = "Buscar";
+            btnFindUser.Size = new System.Drawing.Size(100, 28);
+            this.gbSearchUser.Text = "Buscar usuarios";
+        }
+
+        public void ShowUserResult(string name)
+        {
+            Manager myManager = new Manager();
+            myManager.FindUser(dgvUserList,name);
+        }
+
+        private void btnShowAllUsers_Click(object sender, EventArgs e)
+        {
+            ShowData();
+        }
+        
+        
     }
 }

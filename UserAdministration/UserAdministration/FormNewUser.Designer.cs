@@ -53,7 +53,7 @@
             this.btn_create_user.Name = "btn_create_user";
             this.btn_create_user.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btn_create_user.Size = new System.Drawing.Size(133, 28);
-            this.btn_create_user.TabIndex = 0;
+            this.btn_create_user.TabIndex = 6;
             this.btn_create_user.Text = "Crear usuario";
             this.btn_create_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_create_user.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(220, 22);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
             // 
             // txtLastName
             // 
@@ -73,7 +73,7 @@
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(220, 22);
-            this.txtLastName.TabIndex = 2;
+            this.txtLastName.TabIndex = 1;
             // 
             // txtAddr
             // 
@@ -81,7 +81,7 @@
             this.txtAddr.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddr.Name = "txtAddr";
             this.txtAddr.Size = new System.Drawing.Size(324, 22);
-            this.txtAddr.TabIndex = 3;
+            this.txtAddr.TabIndex = 2;
             // 
             // txtPhone
             // 
@@ -106,7 +106,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 23);
+            this.label1.Location = new System.Drawing.Point(24, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 16);
@@ -116,7 +116,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 55);
+            this.label2.Location = new System.Drawing.Point(23, 52);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 16);
@@ -126,37 +126,37 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 88);
+            this.label3.Location = new System.Drawing.Point(16, 85);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 16);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Direccion";
+            this.label3.Text = "Dirección";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 153);
+            this.label4.Location = new System.Drawing.Point(19, 150);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Telefono";
+            this.label4.Text = "Teléfono";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 188);
+            this.label5.Location = new System.Drawing.Point(28, 183);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Genero";
+            this.label5.Text = "Género";
             // 
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(40, 121);
+            this.Label6.Location = new System.Drawing.Point(39, 118);
             this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(42, 16);
@@ -169,7 +169,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(324, 22);
-            this.txtEmail.TabIndex = 12;
+            this.txtEmail.TabIndex = 3;
             // 
             // FormNewUser
             // 

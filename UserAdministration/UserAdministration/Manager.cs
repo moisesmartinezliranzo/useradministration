@@ -31,6 +31,38 @@ namespace UserAdministration
         {
             this.userId = id;
         }
+
+        /*Busca los usuarios*/
+
+        public void FindUser(DataGridView grid, string name)
+        {
+            myDataTable = new DataTable();
+            myCommand = new SqlCommand("SP_SearchUser", MyConnection.GetConnection());
+            myCommand.CommandType = CommandType.StoredProcedure;
+            myCommand.Parameters.Add("@name",SqlDbType.VarChar).Value = name;
+            mySqlAdapter = new SqlDataAdapter(myCommand);
+
+            mySqlAdapter.Fill(myDataTable);
+            if (myCommand.Connection.State == ConnectionState.Open)
+            {
+                myCommand.Connection.Close();
+            }
+
+            if (myDataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("Lo sentimos el usuario no ha sido encontrado","Usuario no encontrado",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                for (int i = 0; i < myDataTable.Rows.Count; i++)
+                {
+                    myDataTable.Rows[i]["Nombre"] = UpperFirstLetter(myDataTable.Rows[i]["Nombre"].ToString());
+                    myDataTable.Rows[i]["Apellido"] = UpperFirstLetter(myDataTable.Rows[i]["Apellido"].ToString());
+                }
+
+                grid.DataSource = myDataTable;
+            }            
+        }
         
         /*Muestra los registros de la tabla en un gridview*/
         public void DisplayUserList(DataGridView grid)
@@ -216,7 +248,8 @@ namespace UserAdministration
             mySmtpClient.Credentials = new System.Net.NetworkCredential("moisesmmltest@gmail.com","pwdprueba");
 
             mySmtpClient.Send(myMailMessage);
-
         }
+
+        
     }
 }

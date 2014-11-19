@@ -75,7 +75,7 @@
             // 
             this.btnFindUser.Image = global::UserAdministration.Properties.Resources.user_search;
             this.btnFindUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFindUser.Location = new System.Drawing.Point(213, 19);
+            this.btnFindUser.Location = new System.Drawing.Point(213, 20);
             this.btnFindUser.Name = "btnFindUser";
             this.btnFindUser.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnFindUser.Size = new System.Drawing.Size(100, 28);
@@ -87,11 +87,11 @@
             // 
             // txtUserParam
             // 
-            this.txtUserParam.Location = new System.Drawing.Point(7, 21);
-            this.txtUserParam.MaximumSize = new System.Drawing.Size(220, 26);
-            this.txtUserParam.MinimumSize = new System.Drawing.Size(200, 26);
+            this.txtUserParam.Location = new System.Drawing.Point(7, 23);
+            this.txtUserParam.MaximumSize = new System.Drawing.Size(220, 25);
+            this.txtUserParam.MinimumSize = new System.Drawing.Size(200, 25);
             this.txtUserParam.Name = "txtUserParam";
-            this.txtUserParam.Size = new System.Drawing.Size(200, 22);
+            this.txtUserParam.Size = new System.Drawing.Size(200, 25);
             this.txtUserParam.TabIndex = 1;
             // 
             // gbSearchUser
@@ -111,7 +111,7 @@
             // 
             this.btnShowAllUsers.Image = global::UserAdministration.Properties.Resources.usergroup;
             this.btnShowAllUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShowAllUsers.Location = new System.Drawing.Point(319, 19);
+            this.btnShowAllUsers.Location = new System.Drawing.Point(319, 20);
             this.btnShowAllUsers.Name = "btnShowAllUsers";
             this.btnShowAllUsers.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnShowAllUsers.Size = new System.Drawing.Size(135, 28);
@@ -124,9 +124,9 @@
             // gbCreateUser
             // 
             this.gbCreateUser.Controls.Add(this.btnNewUser);
-            this.gbCreateUser.Location = new System.Drawing.Point(485, 13);
+            this.gbCreateUser.Location = new System.Drawing.Point(485, 12);
             this.gbCreateUser.Name = "gbCreateUser";
-            this.gbCreateUser.Size = new System.Drawing.Size(160, 54);
+            this.gbCreateUser.Size = new System.Drawing.Size(160, 55);
             this.gbCreateUser.TabIndex = 4;
             this.gbCreateUser.TabStop = false;
             this.gbCreateUser.Text = "Nuevo usuario";

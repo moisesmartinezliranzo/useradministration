@@ -28,7 +28,6 @@ namespace UserAdministration
             txtEmail.Text = user.Email;
             txtPhone.Text = user.Phone;
             cmbGender.Text = user.Gender;
-            string a = "a";
 
             btnEnableUnable.Image = global::UserAdministration.Properties.Resources.lock1;
         }
